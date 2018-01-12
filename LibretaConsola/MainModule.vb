@@ -106,7 +106,15 @@
     End Sub
 
     Sub EliminarTodosContactos()
-
+        Dim Tecla As ConsoleKeyInfo
+        Console.ForegroundColor = ConsoleColor.Red
+        Console.WriteLine("¿Está seguro que desea eliminar todos los contactos?")
+        Console.WriteLine("Presione Enter para confirmar.")
+        Tecla = Console.ReadKey()
+        If Tecla.Key = ConsoleKey.Enter Then
+            Contactos.Clear()
+            Console.WriteLine("Contactos eliminados.")
+        End If
     End Sub
 
     Sub Salir()
